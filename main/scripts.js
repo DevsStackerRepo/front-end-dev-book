@@ -42,3 +42,11 @@ function getTumbnailsArray(){
     var thumbnailArray = [].slice.call(thumbnails);
     return thumbnailArray;
 }
+
+function initializeEvents(){
+    'use strict';
+    var thumbnails = getTumbnailsArray();
+    thumbnails.forEach(addThumbClickHandler)
+}
+
+initializeEvents();
