@@ -27,10 +27,18 @@ function setDetailsFromThumb(thumbnail){
     setDetails(imageFromThumb(thumbnail),titleFromThumb(thumbnail));
 }
 
+
 function addThumbClickHandler(thumb){
     'use strict';
     thumb.addEventListener('click',function(event){
         event.preventDefault();
         setDetailsFromThumb(thumb);
     })
+}
+
+function getTumbnailsArray(){
+    'use strict';
+    var thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
+    var thumbnailArray = [].slice.call(thumbnails);
+    return thumbnailArray;
 }
